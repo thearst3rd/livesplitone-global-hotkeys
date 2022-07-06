@@ -9,16 +9,19 @@ CONNECTIONS = set()
 
 def on_press(key):
 	print(type(key), key)
-	if key == keyboard.KeyCode.from_vk(96):
+	if key == keyboard.KeyCode.from_char('0'):
 		print("split")
 		websockets.broadcast(CONNECTIONS, "split")
 		websockets.broadcast(CONNECTIONS, "start")
-	elif key == 99:
+	elif key == keyboard.KeyCode.from_char('3'):
 		print("reset")
 		websockets.broadcast(CONNECTIONS, "reset")
-	elif key == 98:
+	elif key == keyboard.KeyCode.from_char('2'):
 		print("skip")
 		websockets.broadcast(CONNECTIONS, "skip")
+	elif key == keyboard.KeyCode.from_char('8'):
+		print("undo")
+		websockets.broadcast(CONNECTIONS, "undo")
 
 
 async def register(websocket):
