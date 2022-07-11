@@ -17,7 +17,7 @@ pip install pynput websockets
 ## Usage
 
 1. Ensure the requirements above are installed
-2. For now, manually edit the `on_press` function in `ls1-hotkeys.py` to use the hotkeys you would like. Current supported are "start/split", "reset", "skip", and "undo".
+2. In `ls1-hotkeys.py`, edit the hotkeys at the top of the script to use the hotkeys you would like. See [the documentation](https://pynput.readthedocs.io/en/latest/keyboard.html) for what keys are available.
 3. Run `python ls1-hotkeys.py`
 4. In LiveSplit One, click "Connect to Server" and enter `ws://localhost:5678`
 5. Pressing hotkeys should now trigger events in LiveSplit One!
