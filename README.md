@@ -21,3 +21,9 @@ pip install pynput websockets
 3. Run `python ls1-hotkeys.py`
 4. In LiveSplit One, click "Connect to Server" and enter `ws://localhost:5678`
 5. Pressing hotkeys should now trigger events in LiveSplit One!
+
+## License
+
+This code is licenced under CC0. Feel free to use it, no attribution required.
+
+https://creativecommons.org/publicdomain/zero/1.0/
