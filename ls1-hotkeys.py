@@ -25,20 +25,20 @@ def on_press(key):
 		print(type(key), key)
 
 	if key == split_hotkey and split_hotkey is not None:
-		print("splitorstart")
-		websockets.broadcast(CONNECTIONS, "splitorstart")
+		print("splitOrStart")
+		websockets.broadcast(CONNECTIONS, '{"command": "splitOrStart"}')
 	elif key == reset_hotkey and reset_hotkey is not None:
 		print("reset")
-		websockets.broadcast(CONNECTIONS, "reset")
+		websockets.broadcast(CONNECTIONS, '{"command": "reset"}')
 	elif key == undo_hotkey and undo_hotkey is not None:
 		print("undo")
-		websockets.broadcast(CONNECTIONS, "undo")
+		websockets.broadcast(CONNECTIONS, '{"command": "undoSplit"}')
 	elif key == skip_hotkey and skip_hotkey is not None:
 		print("skip")
-		websockets.broadcast(CONNECTIONS, "skip")
+		websockets.broadcast(CONNECTIONS, '{"command": "skipSplit"}')
 	elif key == pause_hotkey and pause_hotkey is not None:
-		print("togglepause")
-		websockets.broadcast(CONNECTIONS, "togglepause")
+		print("togglePauseOrStart")
+		websockets.broadcast(CONNECTIONS, '{"command": "togglePauseOrStart"}')
 
 
 async def register(websocket):
